@@ -422,8 +422,8 @@ def test_nombre_de_grupo():
     CREATE TABLE message(_id INTEGER PRIMARY KEY, chat_row_id INT, from_me INT,
       key_id TEXT, sender_jid_row_id INT, timestamp INT, message_type INT,
       text_data TEXT, starred INT);
-    INSERT INTO jid VALUES (1,'120363000000@g.us');
-    INSERT INTO jid VALUES (2,'34600111222@s.whatsapp.net');
+    INSERT INTO jid VALUES (1,'8637097722.us');
+    INSERT INTO jid VALUES (2,'8637097722@s.whatsapp.net');
     INSERT INTO chat VALUES (1,1,'Grupo de trabajo');
     INSERT INTO chat VALUES (2,2,NULL);
     INSERT INTO message VALUES (1,1,0,'K',2,1762844892000,0,'hola',0);
@@ -436,10 +436,12 @@ def test_nombre_de_grupo():
     assert grupo.name == "Grupo de trabajo", grupo.name
     assert grupo.is_group
     # el chat individual no tiene asunto: cae al numero
-    individual = chats["34600111222@s.whatsapp.net"]
-    assert individual.label == "34600111222"
+    individual = chats["8637097722@s.whatsapp.net"]
+    assert individual.label == "8637097722"
     assert not individual.is_group
     print("  nombre de grupo resuelto desde chat.subject OK")
+    run
+        
 
 
 def test_salida_por_defecto():
