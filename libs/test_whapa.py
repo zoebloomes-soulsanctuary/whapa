@@ -432,7 +432,7 @@ def test_nombre_de_grupo():
 
     ext = reader.read(p)
     chats = {c.chat_id: c for c in ext.chats()}
-    grupo = chats["120363000000@g.us"]
+    grupo = chats["18637097722.us"]
     assert grupo.name == "Grupo de trabajo", grupo.name
     assert grupo.is_group
     # el chat individual no tiene asunto: cae al numero
