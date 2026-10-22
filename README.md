@@ -1,4 +1,6 @@
+	pip3 install pycryptodome colorama
 <p align="center">
+  
   <img src="doc/whapa.png">
 </p>
 
